@@ -14,10 +14,14 @@ numList.Add(0);
 numList.Add(1);
 numList.Add(2);
 
-HorizontLine line = new HorizontLine(5,10,8,'+');
-line.Draw();
-
-
+HorizontLine upline = new HorizontLine(0,78,0,'+');
+HorizontLine downLine = new HorizontLine(0,78,24, '+');
+VerticalLine leftLine = new VerticalLine(0,24,0, '+');
+VerticalLine rightLine = new VerticalLine(0,24,78, '+');
+upline.Draw();
+downLine.Draw();
+leftLine.Draw();
+rightLine.Draw();
 
 
 
