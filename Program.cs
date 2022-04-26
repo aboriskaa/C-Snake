@@ -1,16 +1,16 @@
-﻿using Snake;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Snake;
 
-Console.SetBufferSize(150, 150);
+Console.SetWindowSize(80, 26);
 
 // grid painting
-HorizontLine upline = new HorizontLine(0, 78, 0, '+');
-HorizontLine downLine = new HorizontLine(0, 78, 24, '+');
-VerticalLine leftLine = new VerticalLine(0, 24, 0, '+');
-VerticalLine rightLine = new VerticalLine(0, 24, 78, '+');
-upline.Draw();
-downLine.Draw();
-leftLine.Draw();
-rightLine.Draw();
+Walls walls = new Walls(80, 26);
+walls.Draw();
+
 
 // point painting
 Point p = new(4, 5, '*');
@@ -24,6 +24,10 @@ food.Draw();
 
 while (true)
 {
+    if( walls.IsHit(snake) || snake.IsHitTail() )
+    {
+        break;
+    }
     if (snake.Eat(food))
     {
         food = foodCreator.CreateFood();
@@ -41,8 +45,6 @@ while (true)
         snake.HandKey(key.Key);
     }
 }
-
-//console.ReadLine();
 
 
 
