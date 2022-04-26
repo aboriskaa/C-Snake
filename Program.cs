@@ -14,9 +14,12 @@ leftLine.Draw();
 rightLine.Draw();
 
 // point painting
-Point p = new(4,5,'*');
+Point p = new(4, 5, '*');
 MySnake snake = new MySnake(p, 4, Direction.RIGHT);
 snake.Draw();
+snake.Move();
+//Thread.Sleep(300);
+
 Console.ReadLine();
 
 
