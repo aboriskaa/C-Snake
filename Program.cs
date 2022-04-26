@@ -14,6 +14,10 @@ numList.Add(0);
 numList.Add(1);
 numList.Add(2);
 
+HorizontLine line = new HorizontLine(5,10,8,'+');
+line.Draw();
+
+
 
 
 
