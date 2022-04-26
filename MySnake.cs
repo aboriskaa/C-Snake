@@ -8,7 +8,7 @@ namespace Snake
 {
     internal class MySnake :Figure
     {
-        Direction direction;
+        public Direction direction;
         public MySnake(Point tail, int lenght,Direction _direction)
         {
             direction = _direction;
@@ -20,7 +20,6 @@ namespace Snake
                 pList.Add(p);
             }
         }
-
         internal void Move()
         {
             Point tail = pList.First();
