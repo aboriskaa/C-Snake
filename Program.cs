@@ -18,25 +18,20 @@ Point p = new(4, 5, '*');
 MySnake snake = new MySnake(p, 4, Direction.RIGHT);
 snake.Draw();
 
-while(true)
+while (true)
 {
     if (Console.KeyAvailable)
     {
         ConsoleKeyInfo key = Console.ReadKey();
-        if(key.Key == ConsoleKey.LeftArrow)
-            snake.direction = Direction.LEFT;
-        else if (key.Key == ConsoleKey.RightArrow)
-            snake.direction = Direction.RIGHT;
-        else if (key.Key == ConsoleKey.UpArrow)
-            snake.direction = Direction.UP;
-        else if (key.Key == ConsoleKey.DownArrow)
-            snake.direction = Direction.DOWN;
+        snake.HandKey(key.Key);
     }
     Thread.Sleep(100);
     snake.Move();
 }
 
-//Console.ReadLine();
+//console.ReadLine();
+
+
 
 
 
