@@ -45,6 +45,28 @@ while (true)
         snake.HandKey(key.Key);
     }
 }
+WriteGameOver();
+Console.ReadLine();
+
+static void WriteGameOver()
+{
+    int xOffset = 25;
+    int yOffset = 8;
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.SetCursorPosition(xOffset, yOffset++);
+    WriteText("============================", xOffset, yOffset++);
+    WriteText("========GAME OVER!!!========", xOffset + 1, yOffset++);
+    yOffset++;
+    WriteText("https://github.com/aboriskaa", xOffset + 2, yOffset++);
+    WriteText("============================", xOffset, yOffset++);
+}
+
+static void WriteText(String text, int xOffset, int yOffset)
+{
+    Console.SetCursorPosition(xOffset, yOffset);
+    Console.WriteLine(text);
+}
+
 
 
 
