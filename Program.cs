@@ -1,13 +1,12 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-int x1 = 1;
-int y1 = 3;
-char sym1 = '*';
+﻿using Snake;
 
-static void Draw(int x, int y, char sym)
-{
-    Console.SetCursorPosition(x, y);
-    Console.WriteLine(sym);
-}
+Console.WriteLine("Snake");
 
-Draw(x1, y1, sym1);
+Point p1 = new(1,3,'*');
+p1.Draw();
+
+Point p2 = new(4,5,'#');
+p2.Draw();
+
+
+
